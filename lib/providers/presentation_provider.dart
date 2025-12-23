@@ -27,7 +27,7 @@ final categoriesProvider = Provider<List<Category>>((ref) {
       nominees: [
         Nominee(name: 'Carrasco', imagePath: 'assets/images/default.jpg'),
         Nominee(name: 'Ramon bolero', imagePath: 'assets/images/default.jpg'),
-        Nominee(name: 'Paco', imagePath: 'assets/images/default.jpg')
+        Nominee(name: 'Paco', imagePath: 'assets/images/default.jpg'),
       ],
     ),
 
@@ -93,6 +93,11 @@ final categoriesProvider = Provider<List<Category>>((ref) {
           name: 'Me esta mirando',
           imagePath: 'assets/images/default.jpg',
         ),
+        Nominee(
+          name: 'Chupa culos',
+          imagePath: 'assets/images/default.jpg',
+          videoPath: 'assets/videos/chupa_culos.mp4',
+        ),
       ],
     ),
 
@@ -105,6 +110,10 @@ final categoriesProvider = Provider<List<Category>>((ref) {
         ),
         Nominee(
           name: 'Ramón → ¡Juegas muy mal al poker!',
+          imagePath: 'assets/images/default.jpg',
+        ),
+        Nominee(
+          name: 'Paco → Lo que falla el guiri',
           imagePath: 'assets/images/default.jpg',
         ),
       ],
