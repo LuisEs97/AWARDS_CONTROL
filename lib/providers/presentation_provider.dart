@@ -27,6 +27,7 @@ final categoriesProvider = Provider<List<Category>>((ref) {
       nominees: [
         Nominee(name: 'Carrasco', imagePath: 'assets/images/default.jpg'),
         Nominee(name: 'Ramon bolero', imagePath: 'assets/images/default.jpg'),
+        Nominee(name: 'Paco', imagePath: 'assets/images/default.jpg')
       ],
     ),
 
@@ -76,6 +77,26 @@ final categoriesProvider = Provider<List<Category>>((ref) {
     ),
 
     Category(
+      title: 'Repo video del año',
+      nominees: [
+        Nominee(
+          name: 'A ese tio hay que salvarlo',
+          imagePath: 'assets/images/default.jpg',
+          videoPath: 'assets/videos/Salvarlo.mp4',
+        ),
+        Nominee(
+          name: 'Me esta mirando',
+          imagePath: 'assets/images/default.jpg',
+          videoPath: 'assets/videos/Me_esta_mirando.mp4',
+        ),
+        Nominee(
+          name: 'Me esta mirando',
+          imagePath: 'assets/images/default.jpg',
+        ),
+      ],
+    ),
+
+    Category(
       title: 'Bufada del año',
       nominees: [
         Nominee(
@@ -92,15 +113,18 @@ final categoriesProvider = Provider<List<Category>>((ref) {
     Category(
       title: 'Tanqueada del año',
       nominees: [
-        Nominee(name: 'Ruben', imagePath: 'assets/images/default.jpg'),
-        Nominee(name: 'Carrasco', imagePath: 'assets/images/default.jpg'),
+        Nominee(name: 'Ruben', imagePath: 'assets/images/ruben_ds.jpg'),
+        Nominee(name: 'Carrasco', imagePath: 'assets/images/carrasco_ds.png'),
       ],
     ),
 
     Category(
       title: 'Foto / GIF del año',
       nominees: [
-        Nominee(name: 'Awards futbol', imagePath: 'assets/images/awards_futtbol.jpg'),
+        Nominee(
+          name: 'Awards futbol',
+          imagePath: 'assets/images/awards_futtbol.jpg',
+        ),
         Nominee(
           name: 'Parálisis del sueño',
           imagePath: 'assets/images/paralisis_del_sueno.jpg',
@@ -128,15 +152,20 @@ final categoriesProvider = Provider<List<Category>>((ref) {
           imagePath: 'assets/images/default.jpg',
           videoPath: 'assets/videos/club_de_los_100.mp4',
         ),
-        Nominee(name: 'Es un V8', 
-        imagePath: 'assets/images/default.jpg',
-        videoPath: 'assets/videos/es_un_v8.mp4',
+        Nominee(
+          name: 'Es un V8',
+          imagePath: 'assets/images/default.jpg',
+          videoPath: 'assets/videos/es_un_v8.mp4',
         ),
-        Nominee(name: 'Baile épico', imagePath: 'assets/images/default.jpg',
-        videoPath: 'assets/videos/baile_epico.mp4',
+        Nominee(
+          name: 'Baile épico',
+          imagePath: 'assets/images/default.jpg',
+          videoPath: 'assets/videos/baile_epico.mp4',
         ),
-        Nominee(name: 'M30', imagePath: 'assets/images/default.jpg'
-        ,videoPath: 'assets/videos/m30.mp4',
+        Nominee(
+          name: 'M30',
+          imagePath: 'assets/images/default.jpg',
+          videoPath: 'assets/videos/m30.mp4',
         ),
       ],
     ),
@@ -252,7 +281,10 @@ final categoriesProvider = Provider<List<Category>>((ref) {
       title: 'Rager del año',
       nominees: [
         Nominee(name: 'Paco', imagePath: 'assets/images/paco_enfadado.gif'),
-        Nominee(name: 'Carrasco', imagePath: 'assets/images/carras_enfadado.gif'),
+        Nominee(
+          name: 'Carrasco',
+          imagePath: 'assets/images/carras_enfadado.gif',
+        ),
         Nominee(name: 'Ramon', imagePath: 'assets/images/ramon_enfadado.gif'),
       ],
     ),
@@ -261,7 +293,7 @@ final categoriesProvider = Provider<List<Category>>((ref) {
       title: 'Audio del año',
       nominees: [
         Nominee(
-          name: 'Ramón alquiler', 
+          name: 'Ramón alquiler',
           imagePath: 'assets/images/default.jpg',
           audioPath: 'assets/audios/audio_god.mpeg',
         ),
@@ -284,12 +316,12 @@ final categoriesProvider = Provider<List<Category>>((ref) {
         Nominee(
           name: 'Ruben Jr',
           imagePath: 'assets/images/default.jpg',
-          audioPath: 'assets/audios/daniel_venta_roja.opus',
+          audioPath: 'assets/audios/Ruben_jr.opus',
         ),
         Nominee(
           name: 'Daniel fantasy',
           imagePath: 'assets/images/default.jpg',
-          audioPath: 'assets/audios/Ruben_jr.opus',
+          audioPath: 'assets/audios/daniel_venta_roja.opus',
         ),
       ],
     ),
