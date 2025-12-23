@@ -100,18 +100,18 @@ final categoriesProvider = Provider<List<Category>>((ref) {
     Category(
       title: 'Foto / GIF del año',
       nominees: [
-        Nominee(name: 'Awards futbol', imagePath: 'assets/images/default.jpg'),
+        Nominee(name: 'Awards futbol', imagePath: 'assets/images/awards_futtbol.jpg'),
         Nominee(
           name: 'Parálisis del sueño',
-          imagePath: 'assets/images/default.jpg',
+          imagePath: 'assets/images/paralisis_del_sueno.jpg',
         ),
-        Nominee(name: 'Paco feliz', imagePath: 'assets/images/default.jpg'),
+        Nominee(name: 'Paco feliz', imagePath: 'assets/images/paco feliz.jpg'),
         Nominee(
           name: 'Luffy alcohólico',
-          imagePath: 'assets/images/default.jpg',
+          imagePath: 'assets/images/lufy_alcoholico.jpeg',
         ),
-        Nominee(name: 'Luis calvo', imagePath: 'assets/images/default.jpg'),
-        Nominee(name: 'Raul gordo', imagePath: 'assets/images/default.jpg'),
+        Nominee(name: 'Luis calvo', imagePath: 'assets/images/calvo.webp'),
+        Nominee(name: 'Raul gordo', imagePath: 'assets/images/raul_gordo.gif'),
       ],
     ),
 
@@ -121,14 +121,23 @@ final categoriesProvider = Provider<List<Category>>((ref) {
         Nominee(
           name: 'Piedra papel tijera',
           imagePath: 'assets/images/default.jpg',
+          videoPath: 'assets/videos/piedra_papel_tijera.mp4',
         ),
         Nominee(
           name: 'Club de los 100',
           imagePath: 'assets/images/default.jpg',
+          videoPath: 'assets/videos/club_de_los_100.mp4',
         ),
-        Nominee(name: 'Es un V8', imagePath: 'assets/images/default.jpg'),
-        Nominee(name: 'Baile épico', imagePath: 'assets/images/default.jpg'),
-        Nominee(name: 'M30', imagePath: 'assets/images/default.jpg'),
+        Nominee(name: 'Es un V8', 
+        imagePath: 'assets/images/default.jpg',
+        videoPath: 'assets/videos/es_un_v8.mp4',
+        ),
+        Nominee(name: 'Baile épico', imagePath: 'assets/images/default.jpg',
+        videoPath: 'assets/videos/baile_epico.mp4',
+        ),
+        Nominee(name: 'M30', imagePath: 'assets/images/default.jpg'
+        ,videoPath: 'assets/videos/m30.mp4',
+        ),
       ],
     ),
 
@@ -242,19 +251,24 @@ final categoriesProvider = Provider<List<Category>>((ref) {
     Category(
       title: 'Rager del año',
       nominees: [
-        Nominee(name: 'Paco', imagePath: 'assets/images/default.jpg'),
-        Nominee(name: 'Carrasco', imagePath: 'assets/images/default.jpg'),
-        Nominee(name: 'Ramon', imagePath: 'assets/images/default.jpg'),
+        Nominee(name: 'Paco', imagePath: 'assets/images/paco_enfadado.gif'),
+        Nominee(name: 'Carrasco', imagePath: 'assets/images/carras_enfadado.gif'),
+        Nominee(name: 'Ramon', imagePath: 'assets/images/ramon_enfadado.gif'),
       ],
     ),
 
     Category(
       title: 'Audio del año',
       nominees: [
-        Nominee(name: 'Ramón alquiler', imagePath: 'assets/images/default.jpg'),
+        Nominee(
+          name: 'Ramón alquiler', 
+          imagePath: 'assets/images/default.jpg',
+          audioPath: 'assets/audios/audio_god.mpeg',
+        ),
         Nominee(
           name: 'Carrasco mimimi',
           imagePath: 'assets/images/default.jpg',
+          audioPath: 'assets/audios/carrasco_mimimimi.opus',
         ),
       ],
     ),

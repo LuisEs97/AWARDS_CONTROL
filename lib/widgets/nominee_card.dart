@@ -14,7 +14,6 @@ class NomineeCard extends StatefulWidget {
 
 class _NomineeCardState extends State<NomineeCard> {
   VideoPlayerController? _videoController;
-  AudioPlayer? _audioPlayer;
 
   @override
   void initState() {
@@ -26,40 +25,48 @@ class _NomineeCardState extends State<NomineeCard> {
   void didUpdateWidget(covariant NomineeCard oldWidget) {
     super.didUpdateWidget(oldWidget);
 
-    // Si cambia el candidato, reinicia video y audio
+    // Si cambia el candidato, reinicia video solamente
+    // El audio se maneja automáticamente en AudioPlayerWidget
     if (widget.nominee.videoPath != oldWidget.nominee.videoPath ||
         widget.nominee.audioPath != oldWidget.nominee.audioPath) {
       _videoController?.pause();
       _videoController?.dispose();
-      _audioPlayer?.stop();
-
+      _videoController = null;
+      
       _initMedia();
     }
   }
 
   void _initMedia() {
-    // Video
+    // Solo inicializar video si existe
     if (widget.nominee.videoPath != null) {
       _videoController = VideoPlayerController.asset(widget.nominee.videoPath!)
         ..initialize().then((_) {
-          setState(() {});
+          if (mounted) {
+            setState(() {});
+          }
         });
     } else {
       _videoController = null;
     }
-
-    // Audio - ya no inicializamos AudioPlayer aquí, lo maneja AudioPlayerWidget
+    
+    // El audio se maneja en AudioPlayerWidget, no necesitamos AudioPlayer aquí
   }
 
   Future<void> _showFullscreenVideo(BuildContext context) async {
-    if (widget.nominee.videoPath == null) return;
+    if (widget.nominee.videoPath == null || _videoController == null) return;
 
     final controller = VideoPlayerController.asset(widget.nominee.videoPath!);
     await controller.initialize();
-    // Sincroniza la posición pero NO reproducir automáticamente
-    if (_videoController != null) {
-      await controller.seekTo(_videoController!.value.position);
+    
+    // Sincronizar posición actual
+    await controller.seekTo(_videoController!.value.position);
+    
+    final wasPlaying = _videoController!.value.isPlaying;
+    if (wasPlaying) {
+      await controller.play();
     }
+    
     await showDialog(
       context: context,
       builder: (context) => Dialog(
@@ -119,8 +126,9 @@ class _NomineeCardState extends State<NomineeCard> {
         ),
       ),
     );
-    // Guarda la posición al volver
-    if (_videoController != null) {
+    
+    // Guardar la posición al volver
+    if (_videoController != null && mounted) {
       await _videoController!.seekTo(controller.value.position);
       if (controller.value.isPlaying) {
         _videoController!.play();
@@ -134,7 +142,6 @@ class _NomineeCardState extends State<NomineeCard> {
   @override
   void dispose() {
     _videoController?.dispose();
-    _audioPlayer?.dispose();
     super.dispose();
   }
 
@@ -147,7 +154,6 @@ class _NomineeCardState extends State<NomineeCard> {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        // Mostrar video si existe
         if (hasVideo)
           isVideoInitialized
               ? Column(
@@ -204,7 +210,6 @@ class _NomineeCardState extends State<NomineeCard> {
                   height: 250,
                   child: Center(child: CircularProgressIndicator()),
                 )
-        // Mostrar audio si existe (y no hay video)
         else if (hasAudio)
           Column(
             children: [
@@ -212,7 +217,6 @@ class _NomineeCardState extends State<NomineeCard> {
               const SizedBox(height: 20),
             ],
           )
-        // Si no hay ni video ni audio, mostrar imagen
         else
           Image.asset(widget.nominee.imagePath, height: 400),
         
