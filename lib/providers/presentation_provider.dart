@@ -44,7 +44,11 @@ final categoriesProvider = Provider<List<Category>>((ref) {
       title: 'ANTIPRIME del año',
       nominees: [
         Nominee(name: 'Raul', imagePath: 'assets/images/default.jpg'),
-        Nominee(name: 'Daniel', imagePath: 'assets/images/default.jpg'),
+        Nominee(
+          name: 'Daniel',
+          imagePath: 'assets/images/default.jpg',
+          videoPath: 'assets/videos/daniel.mp4',
+        ),
         Nominee(name: 'Ramon', imagePath: 'assets/images/default.jpg'),
       ],
     ),
@@ -62,7 +66,7 @@ final categoriesProvider = Provider<List<Category>>((ref) {
         ),
         Nominee(
           name: 'Fin de año piscina',
-          imagePath: 'assets/images/default.jpg',
+          imagePath: 'assets/images/lo_que_falla_el_guiri.jpg',
         ),
       ],
     ),
@@ -90,13 +94,14 @@ final categoriesProvider = Provider<List<Category>>((ref) {
           videoPath: 'assets/videos/Me_esta_mirando.mp4',
         ),
         Nominee(
-          name: 'Me esta mirando',
+          name: 'Despolle y muerte',
           imagePath: 'assets/images/default.jpg',
+          videoPath: 'assets/videos/despolle_muerte.mp4',
         ),
         Nominee(
-          name: 'Chupa culos',
+          name: 'Este tio es tryhard',
           imagePath: 'assets/images/default.jpg',
-          videoPath: 'assets/videos/chupa_culos.mp4',
+          videoPath: 'assets/videos/tryhard.mp4',
         ),
       ],
     ),
@@ -115,6 +120,7 @@ final categoriesProvider = Provider<List<Category>>((ref) {
         Nominee(
           name: 'Paco → Lo que falla el guiri',
           imagePath: 'assets/images/default.jpg',
+          videoPath: 'assets/videos/lo_que_falla_el_guiri.mp4',
         ),
       ],
     ),
@@ -176,11 +182,16 @@ final categoriesProvider = Provider<List<Category>>((ref) {
           imagePath: 'assets/images/default.jpg',
           videoPath: 'assets/videos/m30.mp4',
         ),
+        Nominee(
+          name: 'Chupa culos',
+          imagePath: 'assets/images/default.jpg',
+          videoPath: 'assets/videos/chupa_culos.mp4',
+        ),
       ],
     ),
 
     Category(
-      title: 'Entró en 5 minutos entró',
+      title: 'Entro en 5 minutos',
       nominees: [
         Nominee(name: 'Daniel', imagePath: 'assets/images/default.jpg'),
       ],
