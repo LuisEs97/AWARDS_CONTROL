@@ -44,7 +44,11 @@ final categoriesProvider = Provider<List<Category>>((ref) {
       title: 'ANTIPRIME del año',
       nominees: [
         Nominee(name: 'Raul', imagePath: 'assets/images/default.jpg'),
-        Nominee(name: 'Daniel', imagePath: 'assets/images/default.jpg'),
+        Nominee(
+          name: 'Daniel',
+          imagePath: 'assets/images/default.jpg',
+          videoPath: 'assets/videos/daniel.mp4',
+        ),
         Nominee(name: 'Ramon', imagePath: 'assets/images/default.jpg'),
       ],
     ),
@@ -95,9 +99,14 @@ final categoriesProvider = Provider<List<Category>>((ref) {
           videoPath: 'assets/videos/Despolle_y_muerte.mp4',
         ),
         Nominee(
-          name: 'Chupa culos',
+          name: 'Alguien a muerto',
           imagePath: 'assets/images/default.jpg',
-          videoPath: 'assets/videos/chupa_culos.mp4',
+          videoPath: 'assets/videos/alguien_a_muerto.mp4',
+        ),
+        Nominee(
+          name: 'Luis cuajada',
+          imagePath: 'assets/images/default.jpg',
+          videoPath: 'assets/videos/luis_cuajada.mp4',
         ),
       ],
     ),
@@ -115,7 +124,8 @@ final categoriesProvider = Provider<List<Category>>((ref) {
         ),
         Nominee(
           name: 'Paco → Lo que falla el guiri',
-          imagePath: 'assets/videos/duro_lo_que_acaba_de_fallar_el_guiri.mp4',
+          imagePath: 'assets/images/poker.png',
+          videoPath: 'assets/videos/duro_lo_que_acaba_de_fallar_el_guiri.mp4',
         ),
       ],
     ),
@@ -185,6 +195,11 @@ final categoriesProvider = Provider<List<Category>>((ref) {
           name: 'M30',
           imagePath: 'assets/images/default.jpg',
           videoPath: 'assets/videos/m30.mp4',
+        ),
+        Nominee(
+          name: 'Chupa culos',
+          imagePath: 'assets/images/default.jpg',
+          videoPath: 'assets/videos/chupa_culos.mp4',
         ),
       ],
     ),
@@ -342,6 +357,10 @@ final categoriesProvider = Provider<List<Category>>((ref) {
           name: 'Daniel fantasy',
           imagePath: 'assets/images/default.jpg',
           audioPath: 'assets/audios/daniel_venta_roja.opus',
+        ),
+        Nominee(
+          name: 'Ramon poker',
+          imagePath: 'assets/images/poker_rage.jpg',
         ),
       ],
     ),
