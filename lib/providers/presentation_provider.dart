@@ -90,8 +90,9 @@ final categoriesProvider = Provider<List<Category>>((ref) {
           videoPath: 'assets/videos/Me_esta_mirando.mp4',
         ),
         Nominee(
-          name: 'Me esta mirando',
+          name: 'Despolle y muerte',
           imagePath: 'assets/images/default.jpg',
+          videoPath: 'assets/videos/Despolle_y_muerte.mp4',
         ),
         Nominee(
           name: 'Chupa culos',
@@ -110,7 +111,7 @@ final categoriesProvider = Provider<List<Category>>((ref) {
         ),
         Nominee(
           name: 'Ramón → ¡Juegas muy mal al poker!',
-          imagePath: 'assets/images/poker.jpg',
+          imagePath: 'assets/images/poker.png',
         ),
         Nominee(
           name: 'Paco → Lo que falla el guiri',
@@ -152,8 +153,8 @@ final categoriesProvider = Provider<List<Category>>((ref) {
       nominees: [
         Nominee(name: 'Daniel', imagePath: 'assets/images/default.jpg'),
         Nominee(name: 'Paco', imagePath: 'assets/images/default.jpg'),
-        Nominee(name: 'Raul', imagePath: 'assets/images/default.jpeg'),
-        Nominee(name: 'Ruben', imagePath: 'assets/images/default.webp'),
+        Nominee(name: 'Raul', imagePath: 'assets/images/default.jpg'),
+        Nominee(name: 'Ruben', imagePath: 'assets/images/default.jpg'),
       ],
     ),
 
@@ -189,9 +190,10 @@ final categoriesProvider = Provider<List<Category>>((ref) {
     ),
 
     Category(
-      title: 'Entró en 5 minutos entró',
+      title: 'Entro en 5 minutos',
       nominees: [
         Nominee(name: 'Daniel', imagePath: 'assets/images/default.jpg'),
+        Nominee(name: 'Carrasco', imagePath: 'assets/images/default.jpg'),
       ],
     ),
 
