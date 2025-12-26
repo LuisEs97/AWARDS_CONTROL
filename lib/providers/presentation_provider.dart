@@ -110,11 +110,11 @@ final categoriesProvider = Provider<List<Category>>((ref) {
         ),
         Nominee(
           name: 'Ramón → ¡Juegas muy mal al poker!',
-          imagePath: 'assets/images/default.jpg',
+          imagePath: 'assets/images/poker.jpg',
         ),
         Nominee(
           name: 'Paco → Lo que falla el guiri',
-          imagePath: 'assets/images/default.jpg',
+          imagePath: 'assets/videos/duro_lo_que_acaba_de_fallar_el_guiri.mp4',
         ),
       ],
     ),
@@ -145,6 +145,15 @@ final categoriesProvider = Provider<List<Category>>((ref) {
         ),
         Nominee(name: 'Luis calvo', imagePath: 'assets/images/calvo.webp'),
         Nominee(name: 'Raul gordo', imagePath: 'assets/images/raul_gordo.gif'),
+      ],
+    ),
+    Category(
+      title: 'Borracho del año',
+      nominees: [
+        Nominee(name: 'Daniel', imagePath: 'assets/images/default.jpg'),
+        Nominee(name: 'Paco', imagePath: 'assets/images/default.jpg'),
+        Nominee(name: 'Raul', imagePath: 'assets/images/default.jpeg'),
+        Nominee(name: 'Ruben', imagePath: 'assets/images/default.webp'),
       ],
     ),
 
